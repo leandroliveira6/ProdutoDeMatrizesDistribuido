@@ -2,9 +2,9 @@
 
 Usando RMI
 
-| Classe | Args |
-| ------ | ------ |
-| Produtor.Main | CaminhoDasMatrizes.txt |
-| ServidorDeExecucao.Main | 5 |
-| Consumidor.Main | 127.0.0.1 5500 127.0.0.1 5502 |
-| Configurador.Main | 127.0.0.1 5500 127.0.0.1 5501 |
+| Classe | Args | Descrição |
+| ------ | ------ | ------ |
+| Produtor.Main | CaminhoDasMatrizes.txt | Endereço do arquivo com a lista de endereços dos arquivos contendo matrizes |
+| ServidorDeExecucao.Main | 5 | Número de threads desejado |
+| Consumidor.Main | 127.0.0.1 5500 127.0.0.1 5502 | IP/Porta do produtor e IP/Porta do servidor de execução |
+| Configurador.Main | 127.0.0.1 5500 127.0.0.1 5501 | IP/Porta do produtor e IP/Porta do consumidor |
