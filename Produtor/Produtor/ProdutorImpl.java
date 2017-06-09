@@ -32,7 +32,7 @@ public class ProdutorImpl implements Produtor {
     @Override
     synchronized public ConjuntoMatrizes obtemMatrizes() throws RemoteException {
         if (!matrizes.isEmpty()) {
-        	return new ConjuntoMatrizesImpl(matrizes.remove(0));
+            return new ConjuntoMatrizesImpl(matrizes.remove(0));
         }
         return null;
     }
