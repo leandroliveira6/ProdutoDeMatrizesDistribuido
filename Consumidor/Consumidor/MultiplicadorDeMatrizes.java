@@ -23,7 +23,7 @@ public class MultiplicadorDeMatrizes {
     }
 
     public void multiplicaMatrizes(Execucao remotoExecucao, ArrayList<double[][]> matrizes) throws RemoteException, InterruptedException, IOException {
-        System.out.println("MM em execuÁ„o: " + Thread.currentThread().getName());
+        System.out.println("MM em execu√ß√£o: " + Thread.currentThread().getName());
         EscritorDeArquivo arquivo;
         double resultado[][], retorno[] = null;
         CallbackImpl cimpl;
@@ -52,11 +52,11 @@ public class MultiplicadorDeMatrizes {
                 transpor(matriz); //matriz original
 
                 try {
-                	 retorno = cimpl.obtemResultado(); //InterruptedException
-                    //PS n„o tratamos o caso de n„o ser retornado algo (timeout), 
-                    //estamos supondo que a rede est· perfeitamente funcional, sempre
+                    retorno = cimpl.obtemResultado(); //InterruptedException
+                    //PS n√£o tratamos o caso de n√£o ser retornado algo (timeout), 
+                    //estamos supondo que a rede est√° perfeitamente funcional, sempre
                 } catch (InterruptedException ex) {
-                    System.out.println("ERRO! Thread interrompida antes de completar o c·lculo (" + ex.getClass().getSimpleName() + "), encerrando a aplicaÁ„o...");
+                    System.out.println("ERRO! Thread interrompida antes de completar o c√°lculo (" + ex.getClass().getSimpleName() + "), encerrando a aplica√ß√£o...");
                     System.exit(1);
                 }
                 for (int i = 0; i < n; i++) {
