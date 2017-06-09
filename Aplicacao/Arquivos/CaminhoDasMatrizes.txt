@@ -1,0 +1,5 @@
+Arquivos/Conjunto1.txt 3 2
+Arquivos/Conjunto2.txt 3 0
+Arquivos/Conjunto2.txt 3 3
+Arquivos/Conjunto2.txt 3 5
+Arquivos/Conjunto1.txt 3 1

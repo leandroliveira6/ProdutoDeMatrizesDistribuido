@@ -1,0 +1,5 @@
+Conjunto1.txt 3 2
+Conjunto2.txt 3 0
+Conjunto2.txt 3 3
+Conjunto2.txt 3 5
+Conjunto1.txt 3 1
