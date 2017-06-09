@@ -15,21 +15,24 @@ import java.util.concurrent.Semaphore;
  */
 public class CallbackImpl implements Callback {
 
-    double resultado;
+    double resultado[];
     Semaphore passe;
+    int quantidade, posicao;
 
-    public CallbackImpl() {
+    public CallbackImpl(int quantidade) {
         passe = new Semaphore(0);
+        resultado = new double[quantidade];
+        this.quantidade = quantidade;
     }
 
     @Override
-    public void entregaResultado(double resultado) throws RemoteException {
-        this.resultado = resultado;
+    public void entregaResultado(int posicao, double resultado) throws RemoteException {
+        this.resultado[posicao] = resultado;
         passe.release();
     }
 
-    public double obtemResultado() throws InterruptedException {
-        passe.acquire();
+    public double[] obtemResultado() throws InterruptedException {
+        passe.acquire(quantidade);
         return resultado;
     }
 }

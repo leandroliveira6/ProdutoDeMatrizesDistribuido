@@ -18,8 +18,10 @@ public class ProdutoInterno implements Runnable, Serializable {
 	private static final long serialVersionUID = 1L;
 	private final double[] v1, v2;
     Callback cremo;
+    int posicao;
 
-    public ProdutoInterno(Callback cremo, double v1[], double v2[]) {
+    public ProdutoInterno(int posicao, double v1[], double v2[], Callback cremo) {
+    	this.posicao = posicao;
         this.v1 = v1.clone();
         this.v2 = v2.clone();
         this.cremo = cremo;
@@ -29,7 +31,7 @@ public class ProdutoInterno implements Runnable, Serializable {
     public void run() {
         //System.out.println("Thread PI em execução: " + Thread.currentThread().getName());
         try {
-            cremo.entregaResultado(calcular());
+            cremo.entregaResultado(posicao, calcular());
         } catch (RemoteException ex) {
             System.out.println("ERRO! Problema ao entregar o resultado, encerrando a thread...");
             System.exit(1);
