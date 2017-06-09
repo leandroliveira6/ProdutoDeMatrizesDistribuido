@@ -15,8 +15,8 @@ import java.rmi.RemoteException;
  */
 public class ProdutoInterno implements Runnable, Serializable {
 	
-	private static final long serialVersionUID = 1L;
-	private final double[] v1, v2;
+    private static final long serialVersionUID = 1L;
+    private final double[] v1, v2;
     Callback cremo;
     int posicao;
 
@@ -29,7 +29,7 @@ public class ProdutoInterno implements Runnable, Serializable {
 
     @Override
     public void run() {
-        //System.out.println("Thread PI em execução: " + Thread.currentThread().getName());
+        //System.out.println("Thread PI em execuÃ§Ã£o: " + Thread.currentThread().getName());
         try {
             cremo.entregaResultado(posicao, calcular());
         } catch (RemoteException ex) {
