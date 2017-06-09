@@ -4,8 +4,7 @@ Usando RMI
 
 # args
 
-Produtor.Main 
-> CaminhoDasMatrizes.txt
+Produtor.Main 'CaminhoDasMatrizes.txt'
 
 ServidorDeExecucao.Main 
 > 5
