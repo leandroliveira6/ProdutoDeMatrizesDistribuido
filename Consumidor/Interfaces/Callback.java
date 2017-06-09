@@ -14,5 +14,5 @@ import java.rmi.RemoteException;
  */
 public interface Callback extends Remote {
 
-    void entregaResultado(double resultado) throws RemoteException;
+    void entregaResultado(int posicao, double resultado) throws RemoteException;
 }
